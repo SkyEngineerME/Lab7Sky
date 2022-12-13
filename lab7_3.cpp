@@ -5,22 +5,10 @@ using namespace std;
 
 int adiff(int A,int B){
   int C;
-  if(abs(A-B) <= 180){
-  C = abs(A-B); 
-  return C;
-  }
-  else if(abs(A-B) == 0){
-  C = 0; 
-  return C;
-  }
-  else if(abs(A-B)  > 180 && abs(A-B) < 360){
-  C = 360-abs(A-B) ;
-  return C;
-  } 
-  else if(abs(A-B) >= 360){
-  C = abs(A-B)%360;
-  return C;
-  }
+  if(abs(A-B) <= 180){C = abs(A-B); return C;}
+  else if(abs(A-B) == 0){C = 0; return C;}
+  else if(abs(A-B)  > 180 && abs(A-B) < 360){C = 360-abs(A-B) ;return C;} 
+  else if(abs(A-B) >= 360){C = abs(A-B)%360;return C;}
   return 0;
 }
 
